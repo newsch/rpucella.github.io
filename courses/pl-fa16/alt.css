@@ -1,0 +1,200 @@
+body {
+    font-family: 'Open Sans', Optima, Palatino, Arial, sans-serif;
+/*     background-color: rgb(90,0,0);  */
+    color: rgb(0,0,0);
+    padding: 2em 2em 2em 2em ;
+/*    margin: 0em 0em 0em 0em ; */
+    margin: 0 auto;
+    min-width: 50em;
+    max-width: 60em;
+}
+
+div.core {
+    margin-top : 0em;
+    margin-bottom : 2em;
+    margin-left : 2em;
+    margin-right : 2em;
+    padding : 0em;
+}
+
+div.content{
+    background-color: rgb(253,253,247);
+/*    max-width : 60em;
+    min-width : 50em;
+*/    padding : 2em;
+    border-width : 1px;
+    border-color : rgb(0,0,0);
+    border-style : solid;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.clear { clear: both; }   
+
+
+div.navbar { 
+    position: fixed;
+    z-index: 2;
+    text-transform: uppercase;
+    left: 0;
+    top: 0.5em;
+    min-width: 58em;
+    width: 100%;
+/*    height: 3em; */
+    background: rgb(90,0,0); /* #cccccc; */
+    font-size: 100%;
+    padding: 0;   /* needed? */
+    margin: 0 0 0 0;
+    text-align: center;
+}
+
+div.navbar ul { 
+    line-height: 1.5em;
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+/*     height: 3em; */
+}
+
+/*
+div.navbar li { 
+    float: left;
+    width: 10em;
+    height: 3em;
+    line-height: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+}
+*/
+
+div.navbar ul li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+div.navbar li:hover {
+    background: rgb(150,0,0);
+}
+
+div.navbar a {
+    text-decoration: none;
+    color: white;
+
+    display: block;
+    padding: 1em 1em;
+
+}
+
+
+
+
+div.home {
+    position: fixed;
+    z-index: 5;
+    left: 0em;
+    top: 0.5em;
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+div.home:hover {
+    background: rgb(150,0,0);
+}
+
+div.home a {
+    padding: 1em 1em 0.6em 1em;
+}
+
+
+table.toc {
+    text-align: left; 
+    margin-left: auto; 
+    margin-right: auto;
+    width: 70%;
+    font-size: 90%;
+}
+
+a.imageanchor:link {
+    color: rgb(0, 0, 0);
+}
+a:link {
+    text-decoration: none;
+    color: rgb(0, 51, 160);
+}
+a:visited {
+    text-decoration: none;
+    color: rgb(0, 51, 160);
+}
+a:hover {
+    text-decoration: none;
+    color: rgb(154, 0, 0);
+}
+
+table.toc a {
+    text-decoration: none;
+}
+
+h1 { 
+    font-style: normal;
+    font-weight: normal;
+    font-size: 250%;
+    padding: 0em;
+    margin-top: 5px;  /* no idea why this is needed but it is */
+    margin-bottom: 5px; 
+}
+
+p.subtitle {
+    font-size: 140%;
+    font-weight: normal;
+}
+
+ul.simple {
+    list-style-type: none; 
+    padding-left: 0;
+}
+
+ul.lectures {
+    list-style-type: none; 
+    padding-left: 0;
+    margin: 0;
+}
+
+ul.lectures li {
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 2px;
+}
+
+p.ind {
+    padding-left: 30px;
+    margin: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+h3 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 150%;
+}
+
+hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 1px; 
+/*    opacity: 0.3; */
+    width: 100%;
+}
+
+hr.section {
+    height: 2px; 
+    opacity: 1;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}

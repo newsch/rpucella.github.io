@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    
+    <meta charset="utf-8">
+    <title>Programming Languages (Fall 2016)</title>
+
+    <link rel="stylesheet" href="alt.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,700' rel='stylesheet' type='text/css'>
+
+    <script src="autoscroll.js"></script>
+    
+    <style>
+
+        code,tt,pre {
+          font-size: 130%;
+        }
+	
+        div.lect {
+	  padding-top: 0;
+       	  padding-left: 3em;
+	  margin-top:0;
+        }
+    	p.ann { 
+    	  padding-left: 3em;
+    	  text-indent: -3em; 
+    	}
+	p.ann_ctd{
+	  padding-left: 3em;
+        }
+    	span.hdr {
+   	  padding-right: 1em
+    	}
+
+    </style>
+
+    <script>
+      window.addEventListener("load",run,false);
+
+      function run () {
+        // CREATE SCROLLING BEHAVIOR FOR NAVIGATION BAR
+        // actually, for anything with "scrollto" class
+
+        // offset is given by the 'top' div (adjusted for padding)
+        var off = document.getElementById("top").clientHeight;
+        console.log(off);
+        //var elts = document.querySelectorAll("div.navbar a");
+        var elts = document.querySelectorAll("a.scrollto");
+        for (var i=0; i<elts.length; i++) {
+          var href=elts[i].getAttribute("href").slice(1);
+          elts[i].setAttribute("onclick","return false;");
+          elts[i].setAttribute("onmousedown","autoScroll.autoScrollTo(\""+href+"\",-"+(off)+");");
+        }
+
+        // SETUP SEND EMAIL LINK
+        document.getElementById("send_email").addEventListener("click",send_email);
+      }
+
+
+      function send_email () {
+        window.open("mailto:riccardo.pucella@olin.edu");
+      }
+
+      </script>
+  </head>
+
+
+  <body>
+
+    <div class="navbar">
+
+      <div class="home">
+	<a href="../../index.html"><img src="../../home.png" style="height: 1.6em;"></a>
+      </div>
+
+      <ul>
+	<li><a class="scrollto" href="#top"><b>Programming Languages FA16</b></a></li> 
+	<li><a class="scrollto" href="#announcements">Announcements</a></li>
+	<li><a class="scrollto" href="#info">Course Info</a></li>
+	<li><a class="scrollto" href="#lectures">Lectures</a></li>
+	<li><a class="scrollto" href="#homeworks">Homeworks</a></li>
+      </ul>
+    </div>
+
+
+    <!-- padding -->
+    <div id="top" style="height: 7em;"></div>
+    
+    <h1 class="clear">Programming Languages (Fall 2016)</h1>
+    
+    <p class="subtitle">ENGR ???? / ??? ??:??-??:?? / AC ???</p>
+    
+    <p>???
+</p>
+    
+    <hr class="section">
+    <div class="section" id="announcements">
+      <h3>Announcements</h3>
+
+      <ul class="simple">
+
+      	<li>
+	  <p class="ann"><span class="hdr">Sep ??:</span>
+	    Happy start of the semester!</p>
+	</li>
+
+      </ul>
+      
+    </div>
+
+    <hr class="section">
+    <div class="section" id="info">
+      <h3>Course Information</h3>
+
+      <p>Prerequisites: ENGR 2520 (can be taken concurrently, though it's not particularly recommended)</p>
+
+      <p>Instructor: <a href="http://www.rpucella.net">Riccardo Pucella</a> (<a id="send_email" href="#">send email</a>)</p>
+
+      <p>Office hours: Thu 15:00-16:00 / MH 353</p>
+
+      <p>Textbook: There are several excellent books on Theory of Computation
+      (the first part of the course), but they are expensive and we
+      would be covering only a small part of their content. So
+      instead, I settled on an inexpensive book that I will feel free
+      to pick and choose from:</p>
+
+      <ul>
+	<li>Tom
+	Stuart, <i><a href="http://computationbook.com">Understanding Computation</a></i></li>
+      </ul>
+	
+
+	
+      <p>Programming: All programming in this course will be done
+      using the programming
+      language <a href="https://ocaml.org/">OCaml</a>. The OCaml
+      interpreter can be downloaded from the web site, and
+	supports installations on most common systems. Here are a couple of reasonable books on OCaml that you might
+      want to get your hands on if you prefer learning your
+      programming language from a book instead of the web:</p>
+      
+      <ul>
+	<li>Hickey, <i><a href="http://courses.cms.caltech.edu/cs134/cs134b/book.pdf">Introduction
+	      to Objective Caml</a></i> (PDF)</li>
+	<li>Downey,
+	  Monje, <i><a href="http://greenteapress.com/thinkocaml/">Think
+	  OCaml</a></i></li>
+	<li>Minsky, Madhavapeddy,
+	  Hickey, <i><a href="https://realworldocaml.org/">Real World
+	  OCaml</a></i></li>
+      </ul>
+
+
+      <p>Grading: The final grade is based on weekly homework (60%)
+      and two exams (20% each). All work will be done
+      individually. Late homeworks will be penalized (10% per 24 hours)
+      and no homework will be accepted after its solution has been
+      discussed in class.
+
+      <p>Ninjas: We have two ninjas for the class, Sophia Seitz and Siddharth Singal. You can figure out their email addresses &mdash; they're both Olin students. They will host a tutorial section <b>every Monday 17:00-18:00 (AC 318)</b>. It is not mandatory to attend, but strongly recommended. In addition, they will hold the following office hours:
+<ul>
+  <li>Sidd: Saturday 8-10 (EH4 Lounge)</li>
+  <li>Sidd: Tuesday 6-9 (EH4 Lounge)</li>
+  <li>Sophia: Mondays 4-5 (AC 318)</li>
+  <li>Sophia: Tuesdays 6-8 (EH4 Lounge)</li>
+</ul>
+      </p>
+
+      <p>I will expect all of us to follow the <a href="http://www.olin.edu/academic-life/student-affairs-resources/student-life/honor-code/">Olin Honor Code</a>.</p>
+
+     </div>
+
+
+
+
+    <hr class="section">
+    <div class="section" id="lectures">
+      <h3>Lectures and Readings</h3>
+
+      <p>Schedule and topics subject to changes.</p>
+
+      <ul class="lectures">
+	
+	<li><p><span class="hdr">??? ??:</span><b>Introduction / Calculator Language</b></p>
+		<div class="lect">
+		</div>
+	</li>	  
+
+	<li><p><span class="hdr">??? ??:</span><b>Bindings and Identifiers</b></p>
+		<div class="lect">
+		</div>
+	</li>	  
+
+	<li><p><span class="hdr">??? ??:</span><b>First-Class Functions</b></p>
+		<div class="lect">
+		</div>
+	</li>	  
+
+
+      </ul>
+
+    </div>
+
+
+
+    <hr class="section">
+    <div class="section" id="homeworks">
+      <h3>Homeworks</h3>
+
+      <ul class="simple">
+      </ul>
+
+    </div>
+
+  </body>
+</html>
